@@ -17,7 +17,7 @@ RSpec.describe "studio index page" do
       visit "/studios"
 
       within ".studio-#{@studio1.id}" do 
-        expect(page).to have_content(@studio1.name) 
+        expect(page).to have_content(@studio1.name)
         expect(page).to have_content(@movie1.name)
         expect(page).to have_content(@movie2.name)
       end

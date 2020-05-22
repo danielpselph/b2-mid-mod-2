@@ -18,14 +18,14 @@ RSpec.describe "studio index page" do
 
       within ".studio-#{@studio1.id}" do 
         expect(page).to have_content(@studio1.name)
-        expect(page).to have_content(@movie1.name)
-        expect(page).to have_content(@movie2.name)
+        expect(page).to have_content(@movie1.title)
+        expect(page).to have_content(@movie2.title)
       end
 
       within ".studio-#{@studio2.id}" do 
         expect(page).to have_content(@studio2.name) 
-        expect(page).to have_content(@movie3.name)
-        expect(page).to have_content(@movie4.name)
+        expect(page).to have_content(@movie3.title)
+        expect(page).to have_content(@movie4.title)
       end
     end
   end

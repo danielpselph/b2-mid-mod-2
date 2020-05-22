@@ -17,7 +17,11 @@ RSpec.describe "actor show page" do
     it "can see actors name age and list of other actors worked with" do
 
       visit "/actors/#{@actor1.id}"
-      
+
+      expect(page).to have_content(@actor1.name) 
+      expect(page).to have_content(@actor1.age) 
+      expect(page).to have_content(@actor2.name) 
+      expect(page).to have_content(@actor3.name) 
     end
     
   end

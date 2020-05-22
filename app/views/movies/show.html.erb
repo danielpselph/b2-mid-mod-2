@@ -7,3 +7,11 @@
 <% end %>
 
 <h3>Average Age of Actors: <%= @movie.average_age %>
+
+<h3>Add an Actor</h3>
+
+<%= form_tag "/movies/#{@movie.id}" do %>
+  <%= label_tag :actor %>
+  <%= text_field_tag :actor %>
+  <%= submit_tag "Submit" %>
+<% end %>
